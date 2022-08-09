@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <h3>Presonal Information</h3>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Name" >
+
+            <label for="dofbs">Date of Birth (bs)</label>
+            <input type="text" name="dofbs" id="dofbs" placeholder="Enter Date of Birth in BS" >
+            
+            <label for="dofad">Date of Birth (ad)</label>
+            <input type="text" name="dofad" id="dofad" placeholder="Enter Date of Birth in AD">
+
+            <label for="reg">Registratin No.</label>
+            <input type="text" name="reg" id="reg" placeholder="Enter Regidtration No." >
+
+            <label for="smb">Symbol No.</label>
+            <input type="text" name="smb" id="smb" placeholder="Enter Symbol No." >
+
+            <label for="doebs">Date of Examination (bs)</label>
+            <input type="number" name="doebs" id="doebs" placeholder="Enter Date of Examination in BS" >
+
+            <label for="doead">Date of Examination (ad)</label>
+            <input type="number" name="doead" id="doead" placeholder="Enter Date of examination in BS">
+
+            <label for="doi">Date of Issue</label>
+            <input type="number" name="doi" id="doi" placeholder="Enter Date of issue"> 
+        </div>
+        <h3>Subject Information</h3>
+        <div class="t1">
+            <h5>Subject 1 Theory</h5>
+            <label for="scode">Sub. Code</label>
+            <input type="text" name="scode" id="scode" placeholder="Subject Code" >
+
+            <label for="sname">Subject Name</label>
+            <input type="text" name="sname" id="sname" placeholder="Subject Name" >
+            
+            <label for="ch">Credit Hour</label>
+            <input type="text" name="ch" id="ch" placeholder="Credit Hour">
+
+            <label for="omk">ObtainMarks</label>
+            <input type="text" name="omk" id="omk" placeholder="Enter obtain mark" >
+
+            <label for="fmk">Full Mark</label>
+            <input type="text" name="fmk" id="fmk" placeholder="Enter full mark" >
+
+            <label id="pr">Practical</label>
+            <input type="checkbox" name="pr" value="pr" style="width: 10px; margin-left:10px;" onclick="myFunction1()">No
+        </div>
+        <div class="p1" id="p1">
+            <h5>Subject 1 Practical</h5>
+            <label for="scodep">Sub. Code</label>
+            <input type="text" name="scodep" id="scodep" placeholder="Subject Code">
+
+            <label for="snamep">Subject Name</label>
+            <input type="text" name="snamep" id="snamep" placeholder="Subject Name">
+            
+            <label for="ch">Credit Hour</label>
+            <input type="text" name="chp" id="chp" placeholder="Credit Hour">
+
+            <label for="omkp">Obtain Marks</label>
+            <input type="text" name="omkp" id="omkp" placeholder="Enter Obtain mark">
+
+            <label for="fmkp">Full Marks</label>
+            <input type="text" name="fmkp" id="fmkp" placeholder="Enter Full mark">
+        </div>
+
+        <div class="t2">
+            <h5>Subject 2 Theory</h5>
+            <label for="scode2">Sub. Code</label>
+            <input type="text" name="scode2" id="scode2" placeholder="Subject Code" >
+
+            <label for="sname2">Subject Name</label>
+            <input type="text" name="sname2" id="sname2" placeholder="Subject Name" >
+            
+            <label for="ch2">Credit Hour</label>
+            <input type="text" name="ch2" id="ch2" placeholder="Credit Hour">
+
+            <label for="omk2">Obtain Marks</label>
+            <input type="text" name="omk2" id="omk2" placeholder="Enter obtain mark" >
+
+            <label for="mk2">Full Marks</label>
+            <input type="text" name="fmk2" id="fmk2" placeholder="Enter Full mark" >
+
+            <label id="pr2">Practical</label>
+            <input type="checkbox" name="pr2" value="pr2" style="width: 10px; margin-left:10px;" onclick="myFunction2()">No
+        </div>
+        <div class="p2" id="p2">
+            <h5>Subject 2 Practical</h5>
+            <label for="scodep2">Sub. Code</label>
+            <input type="text" name="scodep2" id="scodep2" placeholder="Subject Code">
+
+            <label for="snamep2">Subject Name</label>
+            <input type="text" name="snamep2" id="snamep2" placeholder="Subject Name">
+            
+            <label for="chp2">Credit Hour</label>
+            <input type="text" name="chp2" id="chp2" placeholder="Credit Hour">
+
+            <label for="omkp2">Obtain Marks</label>
+            <input type="text" name="omkp2" id="omkp2" placeholder="Enter obtain mark" >
+
+            <label for="fmkp2">Full Marks</label>
+            <input type="text" name="fmkp2" id="fmkp2" placeholder="Enter Full mark" >
+        </div>
+
+        <div class="t3">
+            <h5>Subject 3 Theory</h5>
+            <label for="scode3">Sub. Code</label>
+            <input type="text" name="scode3" id="scode3" placeholder="Subject Code" >
+
+            <label for="sname3">Subject Name</label>
+            <input type="text" name="sname3" id="sname3" placeholder="Subject Name" >
+            
+            <label for="ch3">Credit Hour</label>
+            <input type="text" name="ch3" id="ch3" placeholder="Credit Hour">
+
+            <label for="omk3">Obtain Marks</label>
+            <input type="text" name="omk3" id="omk3" placeholder="Enter Obtain mark" >
+
+            <label for="fmk3">Full Marks</label>
+            <input type="text" name="fmk3" id="fmk3" placeholder="Enter Full mark" >
+
+            <label id="pr3">Practical</label>
+            <input type="checkbox" name="pr3" value="pr3" style="width: 10px; margin-left:10px;" onclick="myFunction3()">No
+        </div>
+        <div class="p3" id="p3">
+            <h5>Subject 3 Practical</h5>
+            <label for="scodep3">Sub. Code</label>
+            <input type="text" name="scodep3" id="scodep3" placeholder="Subject Code">
+
+            <label for="snamep3">Subject Name</label>
+            <input type="text" name="snamep3" id="snamep3" placeholder="Subject Name">
+            
+            <label for="chp3">Credit Hour</label>
+            <input type="text" name="chp3" id="chp3" placeholder="Credit Hour">
+
+            <label for="omkp3">Obtain Marks</label>
+            <input type="text" name="omkp3" id="omkp3" placeholder="Enter obtainmark">
+
+            <label for="fmkp3">Full Marks</label>
+            <input type="text" name="fmkp3" id="fmkp3" placeholder="Enter full mark">
+        </div>
+
+        <div class="t4">
+            <h5>Subject 4 Theory</h5>
+            <label for="scode4">Sub. Code</label>
+            <input type="text" name="scode4" id="scode4" placeholder="Subject Code" >
+
+            <label for="sname4">Subject Name</label>
+            <input type="text" name="sname4" id="sname4" placeholder="Subject Name" >
+            
+            <label for="ch4">Credit Hour</label>
+            <input type="text" name="ch4" id="ch4" placeholder="Credit Hour">
+
+            <label for="omk4">Obtain Marks</label>
+            <input type="text" name="omk4" id="omk4" placeholder="Enter obtain mark" >
+
+            <label for="fmk4">Full Marks</label>
+            <input type="text" name="fmk4" id="fmk4" placeholder="Enter full mark" >
+
+            <label id="pr4">Practical</label>
+            <input type="checkbox" name="pr4" value="pr4" style="width: 10px; margin-left:10px;" onclick="myFunction4()">No
+        </div>
+        <div class="p4" id="p4">
+            <h5>Subject 4 Practical</h5>
+            <label for="scodep4">Sub. Code</label>
+            <input type="text" name="scodep4" id="scodep4" placeholder="Subject Code">
+
+            <label for="snamep4">Subject Name</label>
+            <input type="text" name="snamep4" id="snamep4" placeholder="Subject Name">
+            
+            <label for="ch4">Credit Hour</label>
+            <input type="text" name="chp4" id="chp4" placeholder="Credit Hour">
+
+            <label for="omkp4">Obtain Marks</label>
+            <input type="text" name="omkp4" id="omkp4" placeholder="Enter obtain mark">
+
+            <label for="fmkp4">Full Marks</label>
+            <input type="text" name="fmkp4" id="fmkp4" placeholder="Enter full mark">
+        </div>
+
+        <div class="t5">
+            <h5>Subject 5 Theory</h5>
+            <label for="scode5">Sub. Code</label>
+            <input type="text" name="scode5" id="scode5" placeholder="Subject Code" >
+
+            <label for="sname5">Subject Name</label>
+            <input type="text" name="sname5" id="sname5" placeholder="Subject Name" >
+            
+            <label for="ch5">Credit Hour</label>
+            <input type="text" name="ch5" id="ch5" placeholder="Credit Hour">
+
+            <label for="omk5">Obtain Marks</label>
+            <input type="text" name="omk5" id="omk5" placeholder="Enter obtain mark" >
+
+            <label for="fmk5">Full Marks</label>
+            <input type="text" name="fmk5" id="fmk5" placeholder="Enter full mark" >
+
+            <label id="pr5">Practical</label>
+            <input type="checkbox" name="pr5" value="pr5" style="width: 10px; margin-left:10px;" onclick="myFunction5()">No
+        </div>
+        <div class="p5" id="p5">
+            <h5>Subject 5 Practical</h5>
+            <label for="scodep5">Sub. Code</label>
+            <input type="text" name="scodep5" id="scodep5" placeholder="Subject Code">
+
+            <label for="snamep5">Subject Name</label>
+            <input type="text" name="snamep5" id="snamep5" placeholder="Subject Name">
+            
+            <label for="ch5">Credit Hour</label>
+            <input type="text" name="chp5" id="chp5" placeholder="Credit Hour">
+
+            <label for="omkp5">Obtain Marks</label>
+            <input type="text" name="omkp5" id="omkp5" placeholder="Enter obtain mark">
+
+            <label for="fmkp5">Full Marks</label>
+            <input type="text" name="fmkp5" id="fmkp5" placeholder="Enter Full mark">
+        </div>
+
+        <div class="t6">
+            <h5>Subject 6 Theory</h5>
+            <label for="scode6">Sub. Code</label>
+            <input type="text" name="scode6" id="scode6" placeholder="Subject Code" >
+
+            <label for="sname6">Subject Name</label>
+            <input type="text" name="sname6" id="sname6" placeholder="Subject Name" >
+            
+            <label for="ch6">Credit Hour</label>
+            <input type="text" name="ch6" id="ch6" placeholder="Credit Hour">
+
+            <label for="omk6">Obtain Marks</label>
+            <input type="text" name="omk6" id="omk6" placeholder="Enter obtain mark" >
+
+            <label for="fmk6">Full Marks</label>
+            <input type="text" name="fmk6" id="fmk6" placeholder="Enter full mark" >
+
+            <label id="pr6">Practical</label>
+            <input type="checkbox" name="pr6" value="pr6" style="width: 10px; margin-left:10px;" onclick="myFunction6()">No
+        </div>
+        <div class="p6" id="p6">
+            <h5>Subject 6 Practical</h5>
+            <label for="scodep6">Sub. Code</label>
+            <input type="text" name="scodep6" id="scodep6" placeholder="Subject Code">
+
+            <label for="snamep6">Subject Name</label>
+            <input type="text" name="snamep6" id="snamep6" placeholder="Subject Name">
+            
+            <label for="ch6">Credit Hour</label>
+            <input type="text" name="chp6" id="chp6" placeholder="Credit Hour">
+
+            <label for="omkp6">Obtain Marks</label>
+            <input type="text" name="omkp6" id="omkp6" placeholder="Enter obtain mark">
+
+            <label for="fmkp6">Full Marks</label>
+            <input type="text" name="fmkp6" id="fmkp6" placeholder="Enter full mark">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="static/js/min.js"></script>
+    
+</body>
+</html>

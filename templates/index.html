@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="body" id="bodys">
+        <div class="body-2">
+
+            <div class="heading" style="color: #1364ef; position:relative;">
+                <img src="static/img/logo.png" alt="" height="100px" width="130px" style="position: absolute; top:-12; left:40px;">
+                <h1>shree amar secondary shool dohari</h1>
+                <h1>kalaiya sub-metropolitant-2</h1>
+                <h1>grade-sheet</h1>
+            </div>
+            <div class="main" style="color: #3B70C9;">
+                <p style="position:relative ;">the following are grade(s) obtained by : ....................................................................................... <span style="text-transform:uppercase ; color:black; position:absolute; left:400px; top:-5px;">{{name}} </span><br>
+                   date of birth : ..........................................<span style="text-transform:uppercase ; color:black; position:absolute; left:140px; top:25px;">{{dofbs}}</span> b.s &nbsp; &nbsp; &nbsp; &nbsp; (....................................................<span style="text-transform:uppercase ; color:black; position:absolute; right:240px; top:25px;">{{dofad}}</span>a.d)<br>
+                registration no. :....................................<span style="text-transform:uppercase ; color:black; position:absolute; left:155px; top:57px;">{{reg}}</span> &nbsp; &nbsp; &nbsp; &nbsp; symbol no. :.................................<span style="text-transform:uppercase ; color:black; position:absolute; right:200px; top:57px;">{{smb}}</span> grade &nbsp; &nbsp; &nbsp;xi <br>
+                in the annual examination conducted by school/campus in .........................................<span style="text-transform:uppercase ; color:black; position:absolute; right:100px; top:85px;">{{doebs}}</span> b.s. <br>
+                (................................<span style="text-transform:uppercase ; color:black; position:absolute; left:40px; top:118px;">{{doead}}</span>a.d) are given bellow.
+                </p>
+                <table border="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>subject code</th>
+                            <th style="width:250px; ">subjects</th>
+                            <th>credit hour</th>
+                            <th>grade point</th>
+                            <th>grade</th>
+                            <th>final grade</th>
+                            <th>remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: black;">
+                        <!-- <tr> -->
+                            <!-- <table> -->
+                                {% for certificate in subjects %}
+                                <tr >
+                                    <td>
+                                        <ul>
+                                            <li>{{certificate.scode}}</li>
+                                            <li>{{certificate.scodep}}</li>
+                                        </ul>
+                                    </td>
+                                    <td >
+                                        <ul>
+                                            <li>{{certificate.sname}}</li>
+                                            <li>{{certificate.snamep}}</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>{{certificate.ch}}</li>
+                                            <li>{{certificate.chp}}</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>{{certificate.gpa}}</li>
+                                            <li>{{certificate.gpap}}</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>{{certificate.gpoint}}</li>
+                                            <li>{{certificate.gpointp}}</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>{{certificate.finalgrade}}</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                <!-- <tr>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td >
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td >
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td >
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td >
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td >
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>1234</li>
+                                            <li>5678</li>
+                                        </ul>
+                                    </td>
+                                </tr> -->
+                                
+                        <tr>
+                            <td class="bord"></td>
+                            <td class="bord" style="font-weight:bold; text-align:right; padding-right:10px; color: #3B70C9;">total</td>
+                            <td class="bord"></td>
+                            <td class="bord"></td>
+                            <td class="bord" colspan="3" style="font-size:10px ; text-align:left; color:#3B70C9; ">grade point average(gpa)<span style="font-size:14px ; font-weight:bold; color: black; ">{{total_grade}}</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="prepared">
+                    <ul style="font-size:14px;">
+                        <li>PREPAIRED BY:</li>
+                        <li style="line-height:50px ;">....................................</li>
+                        <li style="text-align: left;">checked by:</li>
+                        <li style="line-height:10px ;" >(class teacher)</li>
+                        <li style="padding-top:22px;">date of issue:<span style=" font-size:16px; font-weight:bold; color: black;">{{doi}}</span></li>
+                    </ul>
+                </div>
+                <div class="principle">
+                    <ul >
+                        <li style="line-height:50px ;">....................................</li>
+                        <li style="text-align: center;" >principle</li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="line"></div>
+            <footer>
+                <div style="text-transform: uppercase; font-size:13px; color:#3B70C9;">
+                    <p>note : one credit hour equals 82 clock hours.</p>
+                    <p>th&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; theory  <span style="padding-left: 80px;">pr&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; practical</span></p>
+                    <p>abs&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; absent<span style="padding-left: 80px;">w&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; withheld</span></p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
