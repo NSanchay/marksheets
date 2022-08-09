@@ -10,7 +10,7 @@ def home(request):
         fmk = float(request.POST.get('fmk'))
         percentage = (omk*100)/fmk
         fgpa = percentage/25
-        gpa = "{:.2f}".format(fgpa)
+        gpa = "{:.1f}".format(fgpa)
         pr = request.POST.get('pr')
         pr2 = request.POST.get('pr2')
         pr3 = request.POST.get('pr3')
@@ -46,7 +46,7 @@ def home(request):
             fmkp = float(request.POST.get('fmkp'))
             percentagep = (omkp*100)/fmkp
             fgpap = percentagep/25
-            gpap = "{:0.2f}".format(fgpap)
+            gpap = "{:0.1f}".format(fgpap)
         
             ogp = omk+omkp
             fgp = fmk + fmkp
@@ -63,14 +63,14 @@ def home(request):
         fmk2 = float(request.POST.get('fmk2'))
         percentage2 = (omk2*100)/fmk2
         fgpa2 = percentage2/25
-        gpa2 = "{:.2f}".format(fgpa2)
+        gpa2 = "{:.1f}".format(fgpa2)
        
         if pr2 !='pr2':
             omkp2 = float(request.POST.get('omkp2'))
             fmkp2 = float(request.POST.get('fmkp2'))
             percentagep2 = (omkp2*100)/fmkp2
             fgpap2 = percentagep2/25
-            gpap2 = "{:.2f}".format(fgpap2)
+            gpap2 = "{:.1f}".format(fgpap2)
         
             ogp2 = omk2+omkp2
             fgp2 = fmk2 + fmkp2
@@ -86,7 +86,7 @@ def home(request):
         fmk3 = float(request.POST.get('fmk3'))
         percentage3 = (omk3*100)/fmk3
         fgpa3 = percentage3/25
-        gpa3 = "{:.2f}".format(fgpa3)
+        gpa3 = "{:.1f}".format(fgpa3)
         if pr3 != 'pr3':
             omkp3 = float(request.POST.get('omkp3'))
             fmkp3 = float(request.POST.get('fmkp3'))
@@ -110,13 +110,13 @@ def home(request):
         fmk4 = float(request.POST.get('fmk4'))
         percentage4 = (omk4*100)/fmk4
         fgpa4 = percentage4/25
-        gpa4 = "{:.2f}".format(fgpa4)
+        gpa4 = "{:.1f}".format(fgpa4)
         if pr4 != 'pr4':
             omkp4 = float(request.POST.get('omkp4'))
             fmkp4 = float(request.POST.get('fmkp4'))
             percentagep4 = (omkp4*100)/fmkp4
             fgpap4 = percentagep4/25
-            gpap4 = "{:.2f}".format(fgpap4)
+            gpap4 = "{:.1f}".format(fgpap4)
             
             
             ogp4 = omk4+omkp4
@@ -134,13 +134,13 @@ def home(request):
         fmk5 = float(request.POST.get('fmk5'))
         percentage5 = (omk5*100)/fmk5
         fgpa5 = percentage5/25
-        gpa5 = "{:.2f}".format(fgpa5)
+        gpa5 = "{:.1f}".format(fgpa5)
         if pr5 != 'pr5':
             omkp5 = float(request.POST.get('omkp5'))
             fmkp5 = float(request.POST.get('fmkp5'))
             percentagep5 = (omkp5*100)/fmkp5
             fgpap5 = percentagep5/25
-            gpap5 = "{:.2f}".format(fgpap5)
+            gpap5 = "{:.1f}".format(fgpap5)
             
             
             ogp5 = omk5+omkp5
@@ -158,13 +158,13 @@ def home(request):
         fmk6 = float(request.POST.get('fmk6'))
         percentage6 = (omk6*100)/fmk6
         fgpa6 = percentage6/25
-        gpa6 = "{:.2f}".format(fgpa6)
+        gpa6 = "{:.1f}".format(fgpa6)
         if pr6 != 'pr6':
             omkp6 = float(request.POST.get('omkp6'))
             fmkp6 = float(request.POST.get('fmkp6'))
             percentagep6 = (omkp6*100)/fmkp6
             fgpap6 = percentagep6/25
-            gpap6 = "{:.2f}".format(fgpap6)
+            gpap6 = "{:.1f}".format(fgpap6)
             
             
             ogp6 = omk6+omkp6
@@ -179,7 +179,8 @@ def home(request):
         
         final = omk + omkp + omk2 + omkp2 + omk3 + omkp3 + omk4 + omkp4 + omk5 + omkp5 + omk6 + omkp6
         full =  fmk + fmkp + fmk2 + fmkp2 + fmk3 + fmkp3 + fmk4 + fmkp4 + fmk5 + fmkp5 + fmk6 + fmkp6
-        total_grade = ((final*100)/full)/25
+        ftotal_grade = ((final*100)/full)/25
+        total_grade = "{:.1f}".format(ftotal_grade)
         data = {
             'name' : request.POST.get('name'),
             'dofbs': request.POST.get('dofbs'),
