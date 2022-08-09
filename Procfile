@@ -1,0 +1,1 @@
+web: gunicorn marksheet.wsgi --log-file -

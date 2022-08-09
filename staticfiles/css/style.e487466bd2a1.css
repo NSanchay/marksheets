@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.body {
+  width: 793.92px;
+  padding: 5px;
+  margin: 0 auto;
+  border: 5px solid #3B70C9;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.body-2 {
+  padding: 10px;
+  border: 3px solid #3B70C9;
+  margin: 0 auto;
+}
+.body-2 .heading h1 {
+  font-family: "Kanit", sans-serif;
+  text-align: center;
+  line-height: 8px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 900;
+}
+.body-2 .heading h1:first-child {
+  font-size: 24px;
+}
+.body-2 .heading h1:last-child {
+  margin-top: 26px;
+}
+.body-2 .main {
+  text-transform: uppercase;
+  padding: 10px;
+  line-height: 30px;
+}
+.body-2 .main table {
+  width: 100%;
+}
+.body-2 .main table thead th {
+  text-transform: uppercase;
+  border: 2px solid #3B70C9;
+  border-right: 0;
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 15px;
+}
+.body-2 .main table thead th:last-child {
+  border-right: 2px solid #3B70C9;
+}
+.body-2 .main table tbody td {
+  padding-left: 5px;
+  font-size: 15px;
+  border-left: 2px solid #3B70C9;
+}
+.body-2 .main table tbody td:last-child {
+  border-right: 2px solid #3B70C9;
+}
+.body-2 .main table tbody td ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+.body-2 .main table tbody td.bord {
+  border-bottom: 2px solid #3B70C9;
+  border-top: 2px solid #3B70C9;
+}
+.body-2 .main .prepared ul, .body-2 .main .principle ul {
+  list-style: none;
+}
+.body-2 .main .prepared {
+  float: left;
+}
+.body-2 .main .principle {
+  float: right;
+}
+.body-2 .main .clear {
+  clear: both;
+}
+.body-2 .line {
+  border: 2px solid #3B70C9;
+  width: 768.92px;
+  margin: -20px 0 0 -12px;
+}
+
+form {
+  width: 800px;
+  margin: 100px auto;
+}
+form input {
+  margin: 10px 0;
+  width: 100%;
+}
+form .mystyle {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
