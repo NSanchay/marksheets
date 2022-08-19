@@ -17,6 +17,12 @@ def home(request):
         pr4 = request.POST.get('pr4')
         pr5 = request.POST.get('pr5')
         pr6 = request.POST.get('pr6')
+        gpoint6 = ''
+        gpa6 = ''
+        omk6 = 0
+        fmk6 = 0
+        finalgrade6 = ''
+        
         gpointp = ''
         gpointp2 = ''
         gpointp3 = ''
@@ -154,28 +160,30 @@ def home(request):
         finalgrade5 = check(percentgp5)
             
         # Sunject 6
-        omk6 = float(request.POST.get('omk6'))
-        fmk6 = float(request.POST.get('fmk6'))
-        percentage6 = (omk6*100)/fmk6
-        fgpa6 = percentage6/25
-        gpa6 = "{:.1f}".format(fgpa6)
-        if pr6 != 'pr6':
-            omkp6 = float(request.POST.get('omkp6'))
-            fmkp6 = float(request.POST.get('fmkp6'))
-            percentagep6 = (omkp6*100)/fmkp6
-            fgpap6 = percentagep6/25
-            gpap6 = "{:.1f}".format(fgpap6)
-            
-            
-            ogp6 = omk6+omkp6
-            fgp6 = fmk6 + fmkp6
-            percentgp6 = (ogp6*100)/fgp6
-            
-            gpointp6 = check(percentagep6)
-        else:
-            percentgp6 = percentage6
-        gpoint6 = check(percentage6)
-        finalgrade6 = check(percentgp6)
+        optional = request.POST.get('optionals')
+        if optional != 'optional':
+            omk6 = float(request.POST.get('omk6'))
+            fmk6 = float(request.POST.get('fmk6'))
+            percentage6 = (omk6*100)/fmk6
+            fgpa6 = percentage6/25
+            gpa6 = "{:.1f}".format(fgpa6)
+            if pr6 != 'pr6':
+                omkp6 = float(request.POST.get('omkp6'))
+                fmkp6 = float(request.POST.get('fmkp6'))
+                percentagep6 = (omkp6*100)/fmkp6
+                fgpap6 = percentagep6/25
+                gpap6 = "{:.1f}".format(fgpap6)
+                
+                
+                ogp6 = omk6+omkp6
+                fgp6 = fmk6 + fmkp6
+                percentgp6 = (ogp6*100)/fgp6
+                
+                gpointp6 = check(percentagep6)
+            else:
+                percentgp6 = percentage6
+            gpoint6 = check(percentage6)
+            finalgrade6 = check(percentgp6)
         
         final = omk + omkp + omk2 + omkp2 + omk3 + omkp3 + omk4 + omkp4 + omk5 + omkp5 + omk6 + omkp6
         full =  fmk + fmkp + fmk2 + fmkp2 + fmk3 + fmkp3 + fmk4 + fmkp4 + fmk5 + fmkp5 + fmk6 + fmkp6

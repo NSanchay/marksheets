@@ -18,3 +18,7 @@ function myFunction1() {
     var element = document.getElementById("p6");
     element.classList.toggle("mystyle");
   }
+  function optional() {
+    var element = document.getElementById("optional");
+    element.classList.toggle("mystyle");
+  }
